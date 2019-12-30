@@ -14,6 +14,26 @@ ts_library(
     ],
 )
 
+load("@npm_bazel_rollup//:index.bzl", "rollup_bundle")
+
+rollup_bundle(
+    name = "bundle",
+    config_file = "rollup.config.js",
+    entry_point = "index.ts",
+    format = "iife",
+    deps = [
+        ":app",
+        "//ui",
+        "@npm//@rollup/plugin-commonjs",
+        "@npm//@rollup/plugin-node-resolve",
+        "@npm//@rollup/plugin-replace",
+        "@npm//@types/react",
+        "@npm//@types/react-dom",
+        "@npm//react",
+        "@npm//react-dom",
+    ],
+)
+
 ts_devserver(
     name = "devserver",
     port = 9000,
@@ -22,6 +42,6 @@ ts_devserver(
         ":index.html",
     ],
     deps = [
-        ":app",
+        ":bundle.js",
     ],
 )

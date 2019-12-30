@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from "react";
 import { sum } from "com_dylanvann_bazel_test/utils";
 
 export interface SumProps {
@@ -7,5 +7,5 @@ export interface SumProps {
 }
 
 export function Sum(props: SumProps) {
-  return <span>{props.a + props.b}</span>;
+  return <span>{sum(props.a, props.b)}</span>;
 }
