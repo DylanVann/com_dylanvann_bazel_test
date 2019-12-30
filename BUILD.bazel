@@ -1,0 +1,8 @@
+exports_files(
+    ["tsconfig.json"],
+    visibility = ["//visibility:public"],
+)
+
+exports_files(["node_modules/react/umd/react.development.js"])
+
+exports_files(["node_modules/react-dom/umd/react-dom.development.js"])

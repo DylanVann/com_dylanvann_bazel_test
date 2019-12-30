@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "jsx": "react"
+  },
+  "bazelOptions": {
+    "workspaceName": ""
+  }
+}

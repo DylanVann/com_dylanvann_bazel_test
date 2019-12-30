@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@npm_bazel_typescript//:index.bzl", "ts_devserver", "ts_library")
+
+ts_library(
+    name = "app",
+    srcs = glob(["*.tsx"]),
+    deps = [
+        "//ui",
+        "@npm//@types/react",
+        "@npm//@types/react-dom",
+        "@npm//react",
+        "@npm//react-dom",
+    ],
+)
+
+ts_devserver(
+    name = "devserver",
+    port = 9000,
+    serving_path = "/bundle.js",
+    static_files = [
+        ":index.html",
+    ],
+    deps = [
+        ":app",
+    ],
+)

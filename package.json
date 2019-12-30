@@ -1,0 +1,22 @@
+{
+    "name": "com_dylanvann_bazel_test",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazel": "latest",
+        "@bazel/buildifier": "latest",
+        "@bazel/ibazel": "latest",
+        "@bazel/typescript": "^1.0.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "typescript": "^3.7.4"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "test": "bazel test //..."
+    },
+    "dependencies": {
+        "@types/react": "^16.9.17",
+        "@types/react-dom": "^16.9.4"
+    }
+}
