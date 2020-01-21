@@ -1,5 +1,5 @@
 import React from "react";
-import { sum } from "com_dylanvann_bazel_test/utils";
+import { sum } from "@dylanvann/utils";
 
 export interface SumProps {
   a: number;

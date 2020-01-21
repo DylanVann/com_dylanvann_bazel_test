@@ -1,5 +1,5 @@
 import React from "react";
-import { Sum } from "com_dylanvann_bazel_test/ui";
+import { Sum } from "@dylanvann/ui";
 
 export function App() {
   return (

@@ -6,7 +6,7 @@ ts_library(
     name = "app",
     srcs = glob(["*.tsx"]),
     deps = [
-        "//ui",
+        "//packages/ui",
         "@npm//@types/react",
         "@npm//@types/react-dom",
         "@npm//react",
@@ -23,7 +23,7 @@ rollup_bundle(
     format = "iife",
     deps = [
         ":app",
-        "//ui",
+        "//packages/ui",
         "@npm//@rollup/plugin-commonjs",
         "@npm//@rollup/plugin-node-resolve",
         "@npm//@rollup/plugin-replace",

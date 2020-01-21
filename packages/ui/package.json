@@ -1,0 +1,7 @@
+{
+  "name": "@dylanvann/ui",
+  "version": "0.0.1",
+  "dependencies": {
+    "@dylanvann/utils": "0.0.1"
+  }
+}
